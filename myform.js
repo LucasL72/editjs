@@ -1,7 +1,7 @@
 
 
 
-console.log('Mon Script')
+console.log('Mon form')
 
 function monForm() {
     // On crée le container
@@ -78,14 +78,13 @@ function monForm() {
 
     const passlabel = document.createElement("label")
     passlabel.setAttribute("for", "password")
-    passlabel.innerText = "Mot de passse"
+    passlabel.innerText = "Mot de passe"
 
     const passinput = document.createElement("input")
     passinput.setAttribute("type", "password")
     passinput.setAttribute("name", "password")
     passinput.setAttribute("id", "password")
     //passinput.setAttribute("onchange", "checkPassword()")
-
 
     const conflabel = document.createElement("label")
     conflabel.setAttribute("for", "password")
@@ -102,7 +101,6 @@ function monForm() {
     passdiv.appendChild(passinput)
     passdiv.appendChild(conflabel)
     passdiv.appendChild(confinput)
-
 
     const divradio = document.createElement("div")
     divradio.setAttribute("style", "display:flex")
@@ -139,6 +137,15 @@ function monForm() {
 }
 monForm()
 
+function showPass() {
+    let y = document.getElementById("password");
+    if (y.type === "password") {
+      y.type = "text";
+    } else {
+      y.type = "password";
+    }
+  } 
+
 // Input Radio
 for (i = 0; i < input.length; i++) {
     input[i].onclick = function (e) {
@@ -159,17 +166,13 @@ function checkForm(event) {
 
     form.submit()
 }
-/*
-function checkPassword() {
-    const pass = document.getElementById('password')
-    const passConfirm = document.getElementById('passwordConfirm')
 
-    if (pass === passConfirm) {
-        console.log('Match password OK')
-        submit()
-    } else {
-        console.log('Les 2 mot de passe sont différent !!')
-        console.log(pass)
-    }
+/*function checkPassword() {
+    const pass = document.getElementById('password').value
+    const passConfirm = document.getElementById('passwordConfirm').value
+
+    if (pass === passConfirm) console.log('Match password OK'), submit()
+    else console.log('Les 2 mot de passe sont différent !!')
+    console.log(pass)
 }
 */

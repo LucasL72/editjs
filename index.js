@@ -1,6 +1,5 @@
 const app = document.getElementById("app")
 const url = "";
-console.log('Check form')
 
 // Déclaration de constante
 const form = document.getElementById('form')
@@ -115,15 +114,12 @@ function maListDeCards() {
     cardBody.appendChild(link);
 
 
-
-    //}
 }
-
-
 
 function mounted() {
     makeSearch()
     maListDeCards()
 
 }
-mounted()
+
+ mounted()
